@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "de.srendi.intelligencetweaks.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "refmap.intelligencetweaks.json",
+  "target": "@env(DEFAULT)",
+  "mixins": [
+  ],
+  "client": [
+    "PacketInflaterMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
