@@ -1,6 +1,7 @@
 package de.srendi.intelligencetweaks;
 
 import de.srendi.intelligencetweaks.configuration.IntelligenceConfig;
+import de.srendi.intelligencetweaks.setup.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,14 +31,15 @@ public class IntelligenceTweaks {
     public static Logger LOGGER = LogManager.getLogger();
 
     public IntelligenceTweaks() {
+        Registration.register();
+
+        MinecraftForge.EVENT_BUS.register(this);
 
         System.setProperty("java.awt.headless", "false");
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IntelligenceConfig.COMMON_CONFIG);
         IntelligenceConfig.loadConfig(IntelligenceConfig.COMMON_CONFIG, FMLPaths.CONFIGDIR.get()
                 .resolve("intelligencetweaks-common.toml"));
-
-
 
     }
 
