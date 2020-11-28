@@ -33,8 +33,6 @@ public class IntelligenceTweaks {
     public IntelligenceTweaks() {
         Registration.register();
 
-        MinecraftForge.EVENT_BUS.register(this);
-
         System.setProperty("java.awt.headless", "false");
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IntelligenceConfig.COMMON_CONFIG);

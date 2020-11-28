@@ -2,9 +2,11 @@ package de.srendi.intelligencetweaks.configuration;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
+import com.google.common.collect.Lists;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 import java.nio.file.Path;
+import java.util.List;
 
 public class IntelligenceConfig {
 
@@ -12,15 +14,21 @@ public class IntelligenceConfig {
 
     public static ForgeConfigSpec.BooleanValue SEND_JOIN_MESSAGE;
 
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> START_ITEMS;
+
+
     public static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
     public static ForgeConfigSpec COMMON_CONFIG;
 
     static {
 
-        COMMON_BUILDER.comment("Messages").push("Messages");
+        COMMON_BUILDER.comment("").push("Join Stuff");
 
         SEND_JOIN_MESSAGE = COMMON_BUILDER.comment("Should the mod send the Join Message").define("sendJoinMessage", true);
+
+        START_ITEMS = COMMON_BUILDER.comment("Here are the items that every player gets when they join a world or a server for the first time").define("first_items", Lists.newArrayList("minecraft:dirt", "minecraft:stone", "intelligencetweaks:silver_coin"),
+                it -> it instanceof String);
 
         JOIN_MESSAGE = COMMON_BUILDER.comment("This is the message that every player gets when they join a world or a server.")
                 .define("joinMessage", "Thank you for playing Intelligence: New Horizon. If you want, you can join the Discord https://discord.srendi.de or leave a review on Curseforge.");
