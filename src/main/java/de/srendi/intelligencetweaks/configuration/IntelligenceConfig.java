@@ -8,10 +8,8 @@ import java.nio.file.Path;
 
 public class IntelligenceConfig {
 
-    public static ForgeConfigSpec.ConfigValue<String> WELCOME_MESSAGE;
     public static ForgeConfigSpec.ConfigValue<String> JOIN_MESSAGE;
 
-    public static ForgeConfigSpec.BooleanValue SEND_WELCOME_MESSAGE;
     public static ForgeConfigSpec.BooleanValue SEND_JOIN_MESSAGE;
 
     public static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
@@ -23,12 +21,9 @@ public class IntelligenceConfig {
         COMMON_BUILDER.comment("Messages").push("Messages");
 
         SEND_JOIN_MESSAGE = COMMON_BUILDER.comment("Should the mod send the Join Message").define("sendJoinMessage", true);
-        SEND_WELCOME_MESSAGE = COMMON_BUILDER.comment("Should the mod send the Welcome Message").define("sendWelcomeMessage", true);
 
-        JOIN_MESSAGE = COMMON_BUILDER.comment("This is the message every player gets when they join a world or a server.")
-                .define("joinMessage", "Thank you for playing Intelligence: New Horizon. <3 ");
-        WELCOME_MESSAGE = COMMON_BUILDER.comment("This is the message that every player only gets once when he joins a world or a server..")
-                .define("welcomeMessage", "Thank you for playing Intelligence: New Horizon. If you want, you can join the Discord https://discord.srendi.de or leave a review on Curseforge.");
+        JOIN_MESSAGE = COMMON_BUILDER.comment("This is the message that every player gets when they join a world or a server.")
+                .define("joinMessage", "Thank you for playing Intelligence: New Horizon. If you want, you can join the Discord https://discord.srendi.de or leave a review on Curseforge.");
 
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();

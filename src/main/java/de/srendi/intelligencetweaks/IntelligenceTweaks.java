@@ -22,9 +22,10 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("intelligencetweaks")
 public class IntelligenceTweaks {
+
+    public static final String MOD_ID = "intelligencetweaks";
 
     public static Logger LOGGER = LogManager.getLogger();
 
@@ -35,6 +36,8 @@ public class IntelligenceTweaks {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IntelligenceConfig.COMMON_CONFIG);
         IntelligenceConfig.loadConfig(IntelligenceConfig.COMMON_CONFIG, FMLPaths.CONFIGDIR.get()
                 .resolve("intelligencetweaks-common.toml"));
+
+
 
     }
 

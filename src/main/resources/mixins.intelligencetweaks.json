@@ -5,8 +5,6 @@
   "refmap": "refmap.intelligencetweaks.json",
   "target": "@env(DEFAULT)",
   "mixins": [
-  ],
-  "client": [
     "PacketInflaterMixin"
   ],
   "injectors": {
