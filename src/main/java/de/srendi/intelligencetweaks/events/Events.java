@@ -4,6 +4,8 @@ import de.srendi.intelligencetweaks.IntelligenceTweaks;
 import de.srendi.intelligencetweaks.configuration.IntelligenceConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.stats.ServerStatisticsManager;
 import net.minecraft.stats.Stats;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
@@ -34,14 +36,28 @@ public class Events {
         }
     }
 
-    private static boolean hasPlayedBefore(PlayerEntity player) {
+    /*private static boolean hasPlayedBefore(PlayerEntity player) {
         World world = player.getEntityWorld();
-        if(world instanceof ServerWorld) {
-            ServerWorld serverWorld = (ServerWorld) world;
-            int leaves = serverWorld.getServer().getPlayerList().getPlayerStats(player).getValue(Stats.CUSTOM, Stats.LEAVE_GAME);
-            return leaves > 0;
+        if(!world.isRemote) {
+            if (world instanceof ServerWorld) {
+                ServerWorld serverWorld = (ServerWorld) world;
+                int leaves = serverWorld.getServer().getPlayerList().getPlayerStats(player).getValue(Stats.CUSTOM, Stats.LEAVE_GAME);
+                return leaves > 0;
+            }
         }
         return false;
+    }*/
+
+    private static boolean hasPlayedBefore(PlayerEntity player) {
+        CompoundNBT tag = player.getPersistentData().getCompound(PlayerEntity.PERSISTED_NBT_TAG);
+        String playedBefore = "played_before";
+        if(tag.getBoolean(playedBefore)) {
+            return true;
+        } else {
+            tag.putBoolean(playedBefore, true);
+            player.getPersistentData().put(PlayerEntity.PERSISTED_NBT_TAG, tag);
+            return false;
+        }
     }
 
     private static void sendMessage(PlayerEntity player, String message) {
