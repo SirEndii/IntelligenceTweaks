@@ -5,12 +5,8 @@ import de.srendi.intelligencetweaks.configuration.IntelligenceConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.stats.ServerStatisticsManager;
-import net.minecraft.stats.Stats;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,18 +31,6 @@ public class Events {
             }
         }
     }
-
-    /*private static boolean hasPlayedBefore(PlayerEntity player) {
-        World world = player.getEntityWorld();
-        if(!world.isRemote) {
-            if (world instanceof ServerWorld) {
-                ServerWorld serverWorld = (ServerWorld) world;
-                int leaves = serverWorld.getServer().getPlayerList().getPlayerStats(player).getValue(Stats.CUSTOM, Stats.LEAVE_GAME);
-                return leaves > 0;
-            }
-        }
-        return false;
-    }*/
 
     private static boolean hasPlayedBefore(PlayerEntity player) {
         CompoundNBT tag = player.getPersistentData().getCompound(PlayerEntity.PERSISTED_NBT_TAG);
