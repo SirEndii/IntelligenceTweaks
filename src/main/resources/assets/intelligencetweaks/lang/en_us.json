@@ -2,5 +2,6 @@
   "item.intelligencetweaks.silver_coin": "Silver Coin",
   "item.intelligencetweaks.gold_coin": "Gold Coin",
   "item.intelligencetweaks.diamond_coin": "Diamond Coin",
-  "item.intelligencetweaks.netherite_coin": "Netherite Coin"
+  "item.intelligencetweaks.netherite_coin": "Netherite Coin",
+  "block.intelligencetweaks.market": "Market"
 }
