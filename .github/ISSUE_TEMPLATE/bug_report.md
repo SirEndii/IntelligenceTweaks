@@ -21,7 +21,7 @@ If applicable, add screenshots or videos to help explain your problem.
 
 **Versions:**
  - Forge version:
- - AdvancedPeripherals version:
+ - Intelligence-Tweaks version:
 
 
 **Crashlog/log (Use hasteb.in hasteb.in to upload your crashlog/log)**
