@@ -22,19 +22,15 @@ archivesBaseName = 'Intelligence Tweaks'
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 mixin {
-    add sourceSets.main, 'refmap.intelligencetweaks.json'
+    add sourceSets.main, "refmap.intelligencetweaks.json"
     disableTargetExport = true
     disableTargetValidator = true
     disableAnnotationProcessorCheck = true
 }
 
-sourceSets {
-    main {
-        ext.refMap = "refmap.intelligencetweaks.json"
-    }
-}
-
 minecraft {
+
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     mappings channel: 'snapshot', version: '20201028-1.16.3'
 
@@ -111,6 +107,7 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
+
 
 publishing {
     publications {

@@ -1,6 +1,6 @@
-package de.srendi.intelligencetweaks.setup;
+package de.srendi.intelligencetweaks.common.setup;
 
-import de.srendi.intelligencetweaks.blocks.Market;
+import de.srendi.intelligencetweaks.common.blocks.Market;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,7 +13,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MARKET = register("market", Market::new);
 
-    static void register() {
+    public static void register() {
 
     }
 

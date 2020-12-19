@@ -1,6 +1,6 @@
-package de.srendi.intelligencetweaks.blocks.tileentitys;
+package de.srendi.intelligencetweaks.common.blocks.tileentitys;
 
-import de.srendi.intelligencetweaks.setup.ModTileEntityTypes;
+import de.srendi.intelligencetweaks.common.setup.ModTileEntityTypes;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;

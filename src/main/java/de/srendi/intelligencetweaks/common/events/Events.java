@@ -1,7 +1,7 @@
-package de.srendi.intelligencetweaks.events;
+package de.srendi.intelligencetweaks.common.events;
 
 import de.srendi.intelligencetweaks.IntelligenceTweaks;
-import de.srendi.intelligencetweaks.configuration.IntelligenceConfig;
+import de.srendi.intelligencetweaks.common.configuration.IntelligenceConfig;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;

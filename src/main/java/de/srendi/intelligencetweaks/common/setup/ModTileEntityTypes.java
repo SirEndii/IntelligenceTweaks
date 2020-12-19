@@ -1,7 +1,7 @@
-package de.srendi.intelligencetweaks.setup;
+package de.srendi.intelligencetweaks.common.setup;
 
 import com.google.common.collect.Sets;
-import de.srendi.intelligencetweaks.blocks.tileentitys.MarketTileEntity;
+import de.srendi.intelligencetweaks.common.blocks.tileentitys.MarketTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 

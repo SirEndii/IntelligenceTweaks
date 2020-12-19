@@ -1,4 +1,4 @@
-package de.srendi.intelligencetweaks.items;
+package de.srendi.intelligencetweaks.common.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

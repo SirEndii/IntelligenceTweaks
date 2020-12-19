@@ -1,6 +1,6 @@
-package de.srendi.intelligencetweaks.blocks;
+package de.srendi.intelligencetweaks.common.blocks;
 
-import de.srendi.intelligencetweaks.setup.ModTileEntityTypes;
+import de.srendi.intelligencetweaks.common.setup.ModTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;

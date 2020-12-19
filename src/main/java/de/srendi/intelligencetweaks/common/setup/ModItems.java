@@ -1,6 +1,6 @@
-package de.srendi.intelligencetweaks.setup;
+package de.srendi.intelligencetweaks.common.setup;
 
-import de.srendi.intelligencetweaks.items.Coin;
+import de.srendi.intelligencetweaks.common.items.Coin;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 

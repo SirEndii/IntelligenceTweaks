@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "de.srendi.intelligencetweaks.mixin",
+  "package": "de.srendi.intelligencetweaks.client.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "refmap.intelligencetweaks.json",
   "target": "@env(DEFAULT)",
