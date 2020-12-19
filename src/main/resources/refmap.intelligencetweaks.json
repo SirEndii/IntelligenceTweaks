@@ -1,12 +1,12 @@
 {
   "mappings": {
-    "de/srendi/intelligencetweaks/mixin/PacketInflaterMixin": {
+    "de/srendi/intelligencetweaks/client/mixin/PacketInflaterMixin": {
       "decode": "Lnet/minecraft/network/NettyCompressionDecoder;decode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V"
     }
   },
   "data": {
     "searge": {
-      "de/srendi/intelligencetweaks/mixin/PacketInflaterMixin": {
+      "de/srendi/intelligencetweaks/client/mixin/PacketInflaterMixin": {
         "decode": "Lnet/minecraft/network/NettyCompressionDecoder;decode(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V"      }
     }
   }

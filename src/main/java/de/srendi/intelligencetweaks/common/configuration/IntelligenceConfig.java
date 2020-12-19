@@ -25,7 +25,7 @@ public class IntelligenceConfig {
 
         COMMON_BUILDER.comment("").push("Join Stuff");
 
-        SEND_JOIN_MESSAGE = COMMON_BUILDER.comment("Activate whether the message should be sent or not").define("sendJoinMessage", true);
+        SEND_JOIN_MESSAGE = COMMON_BUILDER.comment("Activate whether the message should be sent or not.").define("sendJoinMessage", true);
 
         START_ITEMS = COMMON_BUILDER.comment("The items to be given to a player when they join a world or server for the first time.").define("first_items", Lists.newArrayList("minecraft:dirt", "ftbquests:book", "intelligencetweaks:silver_coin"),
                 it -> it instanceof String);
