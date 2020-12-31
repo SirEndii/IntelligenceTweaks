@@ -1,5 +1,6 @@
 package de.srendi.intelligencetweaks;
 
+import de.srendi.intelligencetweaks.common.configuration.ConfigHolder;
 import de.srendi.intelligencetweaks.common.configuration.IntelligenceConfig;
 import de.srendi.intelligencetweaks.common.setup.Registration;
 import net.minecraft.entity.ai.attributes.Attribute;
@@ -17,24 +18,22 @@ public class IntelligenceTweaks {
 
     public static final String MOD_ID = "intelligencetweaks";
 
-    public static Logger LOGGER = LogManager.getLogger();
+    public static Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public IntelligenceTweaks() {
-        getLOGGER().debug("Hello World from IntelligenceTweaks.");
+        getLOGGER().info("Hello World from IntelligenceTweaks.");
         Registration.register();
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, IntelligenceConfig.COMMON_CONFIG);
-        IntelligenceConfig.loadConfig(IntelligenceConfig.COMMON_CONFIG, FMLPaths.CONFIGDIR.get()
-                .resolve("intelligencetweaks-common.toml"));
+        getLOGGER().info("Register configs..");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHolder.COMMON_SPEC);
 
-        //Increases maximumValue of every Attributes
+        //Increases maximumValue of every RangedAttributes
         for (final Attribute attribute : ForgeRegistries.ATTRIBUTES) {
-
             if (attribute instanceof RangedAttribute) {
                 RangedAttribute ranged = (RangedAttribute) attribute;
                 ranged.minimumValue = 0;
                 ranged.maximumValue = 65536;
-                getLOGGER().debug("Max Value for Ranged Attribute " + ranged.getAttributeName() + " set to 65536");
+                getLOGGER().info("Max Value for Ranged Attribute " + ranged.getAttributeName() + " set to 65536");
             }
         }
     }

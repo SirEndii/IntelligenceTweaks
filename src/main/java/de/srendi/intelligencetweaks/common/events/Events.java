@@ -20,10 +20,10 @@ public class Events {
     @SubscribeEvent
     public static void onWorldJoin(PlayerEvent.PlayerLoggedInEvent event) {
         PlayerEntity player = event.getPlayer();
-        if(IntelligenceConfig.SEND_JOIN_MESSAGE.get()) {
-            sendMessage(player, IntelligenceConfig.JOIN_MESSAGE.get());
+        if(IntelligenceConfig.sendJoinMessage) {
+            sendMessage(player, IntelligenceConfig.joinMessage);
             if(!hasPlayedBefore(player)) {
-                for (String item : IntelligenceConfig.START_ITEMS.get()) {
+                for (String item : IntelligenceConfig.startItems) {
                     ResourceLocation resourceLocation = new ResourceLocation(item);
                     ItemStack itemStack = new ItemStack(ForgeRegistries.ITEMS.getValue(resourceLocation));
                     player.addItemStackToInventory(itemStack);
