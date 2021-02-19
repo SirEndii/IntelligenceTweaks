@@ -1,26 +1,26 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[35,)"
 license="All rights reserved"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
 modId="intelligencetweaks"
-version="1.0"
+version="0.1.2b"
 displayName="Intelligence Tweaks"
 displayURL="https://srendi.de/"
 authors="Sr_endi"
 description='''
-Intelligence Tweaks is a mod made for my Modpacks. It increases the maximum packet size from 2MB to 1GB.
+Intelligence Tweaks is a mod made for my Modpacks.
 
 '''
 [[dependencies.intelligencetweaks]]
     modId="forge"
     mandatory=true
-    versionRange="[34,)"
+    versionRange="[35,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.intelligencetweaks]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3,1.16.4)"
+    versionRange="[1.16.4,1.16.5)"
     ordering="NONE"
     side="BOTH"

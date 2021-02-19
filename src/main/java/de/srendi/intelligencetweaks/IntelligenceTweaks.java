@@ -24,10 +24,7 @@ public class IntelligenceTweaks {
         getLOGGER().info("Hello World from IntelligenceTweaks.");
         Registration.register();
 
-        getLOGGER().info("Register configs..");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHolder.COMMON_SPEC);
-
-        //Increases maximumValue of every RangedAttributes
+        /*Increases maximumValue of every RangedAttributes
         for (final Attribute attribute : ForgeRegistries.ATTRIBUTES) {
             if (attribute instanceof RangedAttribute) {
                 RangedAttribute ranged = (RangedAttribute) attribute;
@@ -35,7 +32,11 @@ public class IntelligenceTweaks {
                 ranged.maximumValue = 65536;
                 getLOGGER().info("Max Value for Ranged Attribute " + ranged.getAttributeName() + " set to 65536");
             }
-        }
+        }*/
+
+        getLOGGER().info("Register configs..");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHolder.COMMON_SPEC);
+
     }
 
     public static Logger getLOGGER() {

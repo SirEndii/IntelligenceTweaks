@@ -21,8 +21,7 @@ public class IntelligenceConfig {
             builder.comment("").push("Join Stuff");
 
             SEND_JOIN_MESSAGE = builder.comment("Activate whether the message should be sent or not.").define("sendJoinMessage", true);
-            START_ITEMS = builder.comment("The items to be given to a player when they join a world or server for the first time.").define("first_items", Lists.newArrayList("minecraft:dirt", "ftbquests:book", "intelligencetweaks:silver_coin"),
-                    it -> it instanceof String);
+            START_ITEMS = builder.comment("The items to be given to a player when they join a world or server for the first time.").defineList("first_items", Lists.newArrayList("minecraft:dirt", "ftbquests:book", "intelligencetweaks:silver_coin"), x -> x instanceof String);
             JOIN_MESSAGE = builder.comment("The message to be send to a player when they join a world or server.")
                     .define("joinMessage", "Thank you for playing Intelligence: New Horizon. If you want, you can join the Discord https://discord.srendi.de or leave a review on Curseforge.");
 

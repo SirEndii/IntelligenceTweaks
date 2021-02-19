@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
-        maven { url = 'http://repo.spongepowered.org/maven'}
+        maven { url = 'https://repo.spongepowered.org/maven'}
         jcenter()
         mavenCentral()
     }
@@ -15,7 +15,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'java-gradle-plugin'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.1b'
+version = "${mod_version}"
 group = 'de.srendi.intelligencetweaks'
 archivesBaseName = 'Intelligence Tweaks'
 
@@ -70,7 +70,7 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'intelligencetweaks', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
                 examplemod {
